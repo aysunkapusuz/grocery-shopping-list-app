@@ -13,4 +13,4 @@ const grocerySchema = new mongoose.Schema({
         default: Date.now
     }
 })
-module.exports = mongoose.model('GroceryList', grocerySchema, 'groceries')
+module.exports = mongoose.model('Grocery', grocerySchema, 'groceries')

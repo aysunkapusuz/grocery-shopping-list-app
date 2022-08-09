@@ -3,7 +3,7 @@ const app = express()
 const PORT =8500;
 const mongoose = require("mongoose")
 require('dotenv').config()
-const GroceryList = require('./models/GroceryList')
+const GroceryList = require('./models/Grocery')
 
 
 app.set("view engine", "ejs")
@@ -16,8 +16,9 @@ mongoose.connect(process.env.DB_STRING,
 
 
 app.get('/', async (req,res) => {
-    try{ GroceryList.find({}, (err, groceries) => {
-        res.render('index.ejs', {groceryLists: groceries})
+    try{
+        Grocery.find({}, (err, groceries) => {
+        res.render('index.ejs', {grocery: groceries})
     })
 
 
