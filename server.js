@@ -13,6 +13,19 @@ mongoose.connect(process.env.DB_STRING,
     {useNewUrlParser: true},
     () => {console.log('Connected to db!')})
 
+
+app.get('/', async (req,res) => {
+    try{ GroceryList.find({}, (err, groceries) => {
+        res.render('index.ejs', {groceryLists, groceries})
+    })
+
+
+    }catch(err){
+
+    }
+}
+)
+
 app.listen(PORT, () =>
     console.log(`Server is running on port ${PORT}`)
 )
