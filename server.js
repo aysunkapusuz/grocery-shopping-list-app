@@ -20,8 +20,6 @@ app.get('/', async (req,res) => {
         Grocery.find({}, (err, groceries) => {
         res.render('index.ejs', {grocery: groceries})
     })
-
-
     }catch(err){
 
     }
