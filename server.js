@@ -45,30 +45,6 @@ app.post('/', async(req,res) => {
     }
 })
 
-
-app
-   .route("/edit/:id").get((req,res) => {
-    const id = req.params.id
-    Grocery.find({}, (err, groceries) => {
-        res.render('edit.ejs',{
-            grocery:groceries, idData: id
-        })
-    })
-    .post((req,res) =>{
-        const id = req.params.id
-        Grocery.findByIdAndUpdate(
-            id,
-            {
-              category: req.body.category,
-              item: req.body.item
-            },
-            err => {
-                if (err) return res.status(500).send(err)
-                res.redirect('/')
-            }
-        )
-    })
-})
 function getRequestHandler(req, res) {
     const id = req.params.id;
     Grocery.find({}, (err, groceries) => {
@@ -96,17 +72,15 @@ function getRequestHandler(req, res) {
   
   app.route("/edit/:id").get(getRequestHandler).post(postRequestHandler);
 
-app
-   .route("/remove/:id")
-   .get((req,res) => {
+
+function getDeleteHandler(req,res){
     const id = req.params.id
     Grocery.findByIdAndRemove(id, err =>{
         if (err) return res.status(500).send(err);
         res.redirect("/");
     })
-   })
-
-
+}
+app.route("/remove/:id").get(getDeleteHandler)
 
 
 app.listen(PORT, () =>
