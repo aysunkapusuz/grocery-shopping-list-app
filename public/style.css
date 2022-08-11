@@ -39,4 +39,16 @@ input{
 }
 textarea{
     display: block;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    background-color: palevioletred;
+    border-radius: 10px;
 }
