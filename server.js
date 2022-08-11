@@ -95,7 +95,18 @@ function getRequestHandler(req, res) {
   }
   
   app.route("/edit/:id").get(getRequestHandler).post(postRequestHandler);
-    
+
+app
+   .route("/remove/:id")
+   .get((req,res) => {
+    const id = req.params.id
+    Grocery.findByIdAndRemove(id, err =>{
+        if (err) return res.status(500).send(err);
+        res.redirect("/");
+    })
+   })
+
+
 
 
 app.listen(PORT, () =>
