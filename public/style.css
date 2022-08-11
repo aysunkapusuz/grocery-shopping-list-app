@@ -6,7 +6,6 @@
 
 body{
     background: darkmagenta;
-
 }
 
 .grocery-container {
@@ -36,6 +35,7 @@ input{
     padding: 5px;
     border-radius: 10px;
     height: 29px;
+    width: 100%;
 }
 textarea{
     display: block;
@@ -64,6 +64,7 @@ ul{
     background: rgb(85, 1, 85);
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .grocery-item-category{
@@ -119,4 +120,10 @@ ul{
     cursor: pointer;
     text-decoration: none;
     margin-left: auto;
+}
+.grocery-item .remove{
+    color: red;
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: none;
 }
