@@ -5,8 +5,7 @@
 }
 
 body{
-    background-image: url('pic3.jpg'); 
-    background-size: cover;
+    background-image: url('pic3.jpg') no-repeat center center/cover; 
     
     
 }
