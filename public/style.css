@@ -5,7 +5,9 @@
 }
 
 body{
-    background: darkmagenta;
+    background-image: url('pic1.jpg');
+    background-size: cover;
+    
 }
 
 .grocery-container {
@@ -16,7 +18,9 @@ body{
     width: 600px;
     padding: 20px;
     transform: translate(-50%, -50%);
-    background: rgb(214, 52, 214);
+    /* background: rgb(214, 52, 214); */
+    background: url('pic1.jpg');
+    background-size: cover;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -52,6 +56,10 @@ button {
     background-color: palevioletred;
     border-radius: 10px;
     font-size: 18px;
+}
+button:hover{
+    color: antiquewhite;
+    background-color: rgb(177, 65, 102);
 }
 ul{
     list-style: none;
