@@ -28,28 +28,39 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .grocery{
     width: 400px;
+    font-family: 'Caveat', cursive;
 }
 
 h1{
     padding: 10px;
-    color: hsl(0deg 0% 100%);;
+    color:hsl(77deg 21% 6%);
+    font-weight: bolder;
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+
 }
+
 input{
     margin-bottom: 2px;
     padding: 5px;
     border-radius: 10px;
     height: 29px;
     width: 100%;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
 }
 textarea{
     display: block;
     width: 100%;
     border-radius: 10px;
     padding: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
 }
 button {
     color: white;
@@ -60,6 +71,8 @@ button {
     /* background-color: palevioletred; */
     background-color: orange;
     border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Caveat', cursive;
     font-size: 18px;
 }
 button:hover{
@@ -80,6 +93,7 @@ ul{
     display: flex;
     flex-direction: row;
     width: 100%;
+    font-size: 21px;
 }
 .grocery-item:hover{
     color: antiquewhite;
@@ -88,7 +102,7 @@ ul{
 }
 
 .grocery-item-category{
-    font-size: 16px;
+    font-size: 21px;
     margin-left: 10px;
     margin-right: 10px;
     
@@ -114,7 +128,7 @@ ul{
     margin-left: 5px;
     max-height: 30px;
     display: block;
-    font-size: 10px;
+    font-size: 18px;
 }
 .grocery-item div{
     flex-grow: 2;
@@ -130,7 +144,7 @@ ul{
     margin-left: 5px;
     max-height: 30px;
     display: block;
-    font-size: 10px;
+    font-size: 18px;
     margin-top: 5px;
 }
 
@@ -141,10 +155,12 @@ ul{
     text-decoration: none;
     margin-left: auto;
     color: greenyellow;
+    font-size: 18px;
 }
 .grocery-item .remove{
     color: red;
     margin-right: 5px;
     cursor: pointer;
     text-decoration: none;
+    font-size: 18px;
 }
