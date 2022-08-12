@@ -5,7 +5,9 @@
 }
 
 body{
-    background-image: url('pic3.jpg') no-repeat center center/cover; 
+    background-image: url('pic3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
     
     
 }
@@ -18,7 +20,8 @@ body{
     width: 600px;
     padding: 20px;
     transform: translate(-50%, -50%);
-    /* background: rgb(214, 52, 214); */
+   /* background: rgba(241, 171, 241, 0.5); */
+   background: rgba(234, 211, 167, .5);
     
     background-size: cover;
     border-radius: 30px;
@@ -33,6 +36,7 @@ body{
 
 h1{
     padding: 10px;
+    color: hsl(0deg 0% 100%);;
 }
 input{
     margin-bottom: 2px;
@@ -53,13 +57,15 @@ button {
     cursor: pointer;
     margin: 5px;
     padding: 5px;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
+    background-color: orange;
     border-radius: 10px;
     font-size: 18px;
 }
 button:hover{
     color: antiquewhite;
-    background-color: rgb(177, 65, 102);
+    /* background-color: rgb(177, 65, 102); */
+    background-color: orangered;
 }
 ul{
     list-style: none;
@@ -69,14 +75,16 @@ ul{
     margin: 10px;
     border: none;
     border-radius: 10px;
-    background: rgb(85, 1, 85);
+    /*background: rgb(85, 1, 85);*/
+    background: darkorange;
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 .grocery-item:hover{
     color: antiquewhite;
-    background-color: rgb(53, 2, 53);
+    /*background-color: rgb(53, 2, 53);*/
+    background-color: rgb(221, 96, 43);
 }
 
 .grocery-item-category{
@@ -127,11 +135,12 @@ ul{
 }
 
 .grocery-item .edit{
-    color: palevioletred;
+    /* color: palevioletred; */
     margin-right: 10px;
     cursor: pointer;
     text-decoration: none;
     margin-left: auto;
+    color: greenyellow;
 }
 .grocery-item .remove{
     color: red;
