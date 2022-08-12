@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url('pic1.jpg');
+    background-image: url('pic3.jpg');
     background-size: cover;
     
 }
@@ -19,7 +19,7 @@ body{
     padding: 20px;
     transform: translate(-50%, -50%);
     /* background: rgb(214, 52, 214); */
-    background: url('pic1.jpg');
+    
     background-size: cover;
     border-radius: 30px;
     display: flex;
@@ -73,6 +73,10 @@ ul{
     display: flex;
     flex-direction: row;
     width: 100%;
+}
+.grocery-item:hover{
+    color: antiquewhite;
+    background-color: rgb(53, 2, 53);
 }
 
 .grocery-item-category{
