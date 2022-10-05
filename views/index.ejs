@@ -12,33 +12,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Caveat:wght@400;500&family=Dancing+Script&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <div class="grocery-container">
-        <h1>Grocery Shopping List</h1>
-        <div class="grocery">
-            <form action="/" method="post" class="grocery-header">
-                <input type="text" name="category" value="category">
-                <textarea name="item" id="" cols="45" rows="6">item(s)</textarea>
-                <button type="submit"> <span class="fas fa-plus"></span>Add New Item(s)</button>
-            </form>
-            <ul class="grocery-list">
-                <% grocery.forEach(data => {%>
-                    <li class="grocery-item">
-                       <div class="grocery-item-category">
-                        <%= data.category %>
-                       </div> 
-                       <div class="grocery-item-item">
-                        <%= data.item %>
-                       </div> 
-                       <a href="/edit/<%=data._id %>" class="edit"><span class="fas fa-edit"></span> 
-                       </a>
-                       <a href="/remove/<%=data._id %>" class="remove"><span class="fas fa-times"></span> 
-                       </a>
-                    </li>
-                <% }) %>
-
-            </ul>
-        </div>
-    </div> 
+         <h1>Welcome to Grocery Shopping List App </h1>
+     <div class="definition">
+         <h2>Don't waste paper use the app! </h2>
+     </div>
+     <div class="go">
+        <a href="/grocerylist"><h3> Go to App </h3> </a>
+    </div>
+     </div>
 </body>
 </html>

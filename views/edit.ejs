@@ -12,6 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Caveat:wght@400;500&family=Dancing+Script&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="go">
+        <a href="/"><h3> Exit </h3> </a>
+    </div>
 
     <div class="grocery-container">
         <h1>Edit List</h1>
@@ -22,9 +25,9 @@
                        <li class="grocery-item">
                             <form action="/edit/<%= data._id %>" method="post">
                                  <input type="text" name="category" value="<%=data.category %>">
-                                 <textarea name="item" id="" cols="45" rows="6"> <%=data.item %></textarea>
+                                 <input type="text" name="item" id="" cols="45" rows="6" value="<%=data.item %> "> 
                                  <button type="submit" class="confirm">Confirm</button>
-                                 <a href="/" class="cancel">Cancel</a>
+                                 <a href="/grocerylist" class="cancel">Cancel</a>
                             </form>
                        </li>
                        <% } else { %>

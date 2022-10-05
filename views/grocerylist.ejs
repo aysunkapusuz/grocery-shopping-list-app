@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping List App</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Caveat:wght@400;500&family=Dancing+Script&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="go">
+        <a href="/"><h3> Exit </h3> </a>
+    </div>
+
+    <div class="grocery-container">
+        <h1>Grocery Shopping List</h1>
+        <div class="grocery">
+            <form action="/grocerylist" method="post" class="grocery-header">
+                <input type="text" name="category" value="category">
+                <textarea name="item" id="" cols="45" rows="6">item(s)</textarea>
+                <button type="submit"> <span class="fas fa-plus"></span>Add New Item(s)</button>
+            </form>
+            <ul class="grocery-list">
+                <% grocery.forEach(data => {%>
+                    <li class="grocery-item">
+                       <div class="grocery-item-category">
+                        <%= data.category %>
+                       </div> 
+                       <div class="grocery-item-item">
+                        <%= data.item %>
+                       </div> 
+                       <a href="/edit/<%=data._id %>" class="edit"><span class="fas fa-edit"></span> 
+                       </a>
+                       <a href="/remove/<%=data._id %>" class="remove"><span class="fas fa-times"></span> 
+                       </a>
+                    </li>
+                <% }) %>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

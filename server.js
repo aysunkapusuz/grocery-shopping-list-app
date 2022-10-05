@@ -4,7 +4,8 @@ const app = express()
 const PORT =8500;
 const mongoose = require("mongoose")
 require('dotenv').config()
-const Grocery = require('./models/grocery')
+const Grocery = require('./models/grocery');
+
 
 
 app.set("view engine", "ejs")
@@ -13,14 +14,19 @@ app.use(express.urlencoded({extended: true}))
 
 mongoose.connect(process.env.DB_STRING,
     {useNewUrlParser: true},
-    () => {console.log('Connected to db!')})
+    () => {console.log(`Connected to DB!`)})
 
 
-app.get('/', async (req,res) => {
+app.get('/', (req,res) => {
+        res.render('index.ejs')
+})
+
+//get grocery list
+app.get('/grocerylist', async (req,res) => {
     try{
         Grocery.find({}, (err, groceries) =>{
-            res.render('index.ejs', {
-                grocery: groceries
+            res.render('grocerylist.ejs', {
+                grocery: groceries,
             })
         })
     } catch (error){
@@ -28,9 +34,9 @@ app.get('/', async (req,res) => {
     }
 })
 
-app.post('/', async(req,res) => {
+app.post('/grocerylist', async(req,res) => {
     const grocery = new Grocery(
-        {
+        {   
             category: req.body.category,
             item: req.body.item
         }
@@ -38,10 +44,10 @@ app.post('/', async(req,res) => {
     try {
         await grocery.save()
         console.log(grocery)
-        res.redirect("/")
+        res.redirect("/grocerylist")
     }catch (err){
         if (err) return res.status(500).send(err)
-        res.redirect('/')
+        res.redirect('/grocerylist')
     }
 })
 
@@ -65,7 +71,7 @@ function getRequestHandler(req, res) {
       },
       (err) => {
         if (err) return res.status(500).send(err);
-        res.redirect("/");
+        res.redirect("/grocerylist");
       }
     );
   }
@@ -77,10 +83,12 @@ function getDeleteHandler(req,res){
     const id = req.params.id
     Grocery.findByIdAndRemove(id, err =>{
         if (err) return res.status(500).send(err);
-        res.redirect("/");
+        res.redirect("/grocerylist");
     })
 }
 app.route("/remove/:id").get(getDeleteHandler)
+
+
 
 
 app.listen(PORT, () =>
