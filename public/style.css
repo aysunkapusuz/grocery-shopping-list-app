@@ -33,26 +33,7 @@ body{
     border-radius: 20px;
     color: orangered
 }
-.go{
-    background-color: rgb(252, 239, 217);
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 15px;
-    width: 90px;
-    text-align: center;
-    float: right;
-}
-.go a{
-    text-decoration: none;
-    font-family: 'Caveat', cursive;
-    color: orangered;
-    
-    
-}
 
-.go a:hover{
-    color: red;
-}
 .grocery{
     max-width: 800%;
     font-family: 'Caveat', cursive;
@@ -184,4 +165,25 @@ ul{
     cursor: pointer;
     text-decoration: none;
     font-size: 18px;
+}
+
+.go{
+    background-color: rgb(252, 239, 217);
+    padding: 4px;
+    border-radius: 20px;
+    margin-top: 15px;
+    width: 75px;
+    text-align: center;
+    float: right;
+}
+.go a{
+    text-decoration: none;
+    font-family: 'Caveat', cursive;
+    color: orangered;
+    
+    
+}
+
+.go a:hover{
+    color: red;
 }

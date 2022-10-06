@@ -25,7 +25,7 @@
                        <li class="grocery-item">
                             <form action="/edit/<%= data._id %>" method="post">
                                  <input type="text" name="category" value="<%=data.category %>">
-                                 <input type="text" name="item" id="" cols="45" rows="6" value="<%=data.item %> "> 
+                                 <textarea type="text" name="item" id="" cols="45" rows="6"> <%=data.item %> </textarea>
                                  <button type="submit" class="confirm">Confirm</button>
                                  <a href="/grocerylist" class="cancel">Cancel</a>
                             </form>
